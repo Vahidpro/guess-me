@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
-  background-color: #15202b;
   color: white;
   font-family: "Vazirmatn", sans-serif;
   -webkit-transition: all 0.2s;
@@ -8,6 +7,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 25px;
+}
+
+body {
+  background-color: #15202b;
 }
 
 .container {
@@ -58,7 +61,109 @@ form input {
   font-size: 1.5rem;
 }
 
+form select {
+  padding: 0.2rem;
+}
+
+form label.letters-counter {
+  color: green;
+  font-size: 3rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  right: 0;
+  background-color: #1a1919;
+}
+
 button {
-  background-color: cyan;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: vazirmatn, "sans-serif";
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 10px 10px;
+  border-radius: 100px;
+  background: #0094ff;
+  border: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background: #004b81;
+}
+
+button > svg {
+  width: 34px;
+  margin-left: 8px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+button :active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+a {
+  text-decoration: none;
+}
+
+input.yv {
+  padding: 6px 12px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: whitesmoke;
+  background-color: #00375f;
+  background-clip: padding-box;
+  border: 2px solid #ced4da;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 25px;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+input.yv::-webkit-input-placeholder {
+  color: rgba(114, 250, 198, 0.356);
+}
+
+input.yv:-ms-input-placeholder {
+  color: rgba(114, 250, 198, 0.356);
+}
+
+input.yv::-ms-input-placeholder {
+  color: rgba(114, 250, 198, 0.356);
+}
+
+input.yv::placeholder {
+  color: rgba(114, 250, 198, 0.356);
 }
 /*# sourceMappingURL=main.css.map */
