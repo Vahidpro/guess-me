@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  background-color: #15202b;
+  color: white;
+  font-family: "Vazirmatn", sans-serif;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  width: 98%;
+  padding: 0.5rem;
+  background-color: #142533;
+}
+
+form label,
+form select,
+form option,
+form input,
+form div {
+  background-color: #142533;
+}
+
+form label,
+form div {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+form select,
+form input {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: cyan;
+}
+/*# sourceMappingURL=main.css.map */
