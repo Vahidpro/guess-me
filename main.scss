@@ -109,7 +109,7 @@ a {
 
 input.yv {
   padding: 6px 12px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
   color: whitesmoke;
@@ -130,5 +130,10 @@ input.yv {
 
   &::placeholder {
     color: rgba(114, 250, 198, 0.356);
+    font-size: 1.5rem;
   }
+}
+
+.developer a {
+  color: violet;
 }

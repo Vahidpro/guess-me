@@ -1,0 +1,15 @@
+{
+  "background_color": "blue",
+  "description": "Guess Me! 2 Player game.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "./resources/icon/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Guess Me!",
+  "short_name": "Guess",
+  "start_url": "./index.html"
+}
