@@ -11,6 +11,27 @@
 
 body {
   background-color: #15202b;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+}
+
+nav {
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+main {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+p {
+  margin: 0;
 }
 
 .container {
@@ -38,6 +59,7 @@ form {
           align-items: center;
   font-size: 1.5rem;
   width: 98%;
+  height: 80%;
   padding: 0.5rem;
   background-color: #142533;
 }
@@ -52,13 +74,14 @@ form div {
 
 form label,
 form div {
-  margin: 0.5rem;
+  margin: 1.4rem;
   padding: 0.5rem;
 }
 
 form select,
 form input {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin: 2 0.5rem 2 0.5rem;
 }
 
 form select {
@@ -75,15 +98,19 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 3rem;
+  height: 2.5rem;
   border-radius: 0;
-  position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
   right: 0;
   background-color: #1a1919;
+  margin-top: auto;
+  opacity: 60%;
 }
 
 button {
@@ -102,7 +129,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
 button:hover {
@@ -140,7 +168,7 @@ input.yv {
   color: whitesmoke;
   background-color: #00375f;
   background-clip: padding-box;
-  border: 2px solid #ced4da;
+  border: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -169,6 +197,32 @@ input.yv::-ms-input-placeholder {
 input.yv::placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
+}
+
+.info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.5rem;
+  margin-top: auto;
+}
+
+.info-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #242e3d;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0 0.5rem 0 0.5rem;
+  width: 50%;
+}
+
+.info-container a img {
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .developer a {

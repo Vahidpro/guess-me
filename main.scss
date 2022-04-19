@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+$secondary-text: #8899a6;
+
 * {
   color: white;
   font-family: "Vazirmatn", sans-serif;
@@ -14,6 +16,22 @@
 
 body {
   background-color: #15202b;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+nav {
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+main {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+p {
+  margin: 0;
 }
 
 .container {
@@ -28,6 +46,7 @@ form {
   align-items: center;
   font-size: 1.5rem;
   width: 98%;
+  height: 80%;
   padding: 0.5rem;
   background-color: #142533;
 
@@ -41,13 +60,14 @@ form {
 
   label,
   div {
-    margin: 0.5rem;
+    margin: 1.4rem;
     padding: 0.5rem;
   }
 
   select,
   input {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin: 2 0.5rem 2 0.5rem;
   }
 
   select {
@@ -63,13 +83,15 @@ form {
 footer {
   display: flex;
   width: 100%;
-  height: 3rem;
+  height: 2.5rem;
   border-radius: 0;
-  position: absolute;
   justify-content: center;
+  align-items: center;
   bottom: 0;
   right: 0;
   background-color: #1a1919;
+  margin-top: auto;
+  opacity: 60%;
 }
 
 button {
@@ -83,7 +105,8 @@ button {
   border: 1px solid transparent;
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin: 1rem;
 
   &:hover {
     background: #004b81;
@@ -115,7 +138,7 @@ input.yv {
   color: whitesmoke;
   background-color: #00375f;
   background-clip: padding-box;
-  border: 2px solid #ced4da;
+  border: none;
   appearance: none;
   border-radius: 25px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -131,6 +154,28 @@ input.yv {
   &::placeholder {
     color: rgba(114, 250, 198, 0.356);
     font-size: 1.5rem;
+  }
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+  //   background-color: #142540;
+  padding: 0.5rem;
+  //   margin: 0 0.5rem 0 0.5rem;
+  margin-top: auto;
+
+  a {
+    display: flex;
+    justify-content: space-around;
+    background-color: #242e3d;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    margin: 0 0.5rem 0 0.5rem;
+    width: 50%;
+
+    img {
+      margin: 0 0.5rem 0 0.5rem;
+    }
   }
 }
 
