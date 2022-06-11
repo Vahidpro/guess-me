@@ -1,13 +1,17 @@
 // share menu
 
 const shareData = {
-  title: "GuessMme",
-  text: "بیا بازی کنیم، تو بنویس من حدس میزنم😃🤔!",
-  url: "https://letsguessme.netlify.app/",
+	title: "GuessMe",
+	text: "بیا بازی کنیم، تو بنویس من حدس میزنم😃🤔!",
+	url: "https://letsguessme.netlify.app/",
 };
 
-const btnShare = document.querySelector("btn-share");
+// Letters Counter
+const wordInput = document.querySelector(".word-input");
+const log = document.querySelector(".letters-counter");
 
-btnShare.addEventListener("click", async () => {
-  await navigator.share(shareData);
-});
+wordInput.addEventListener("input", updateLetters);
+
+function updateLetters(e) {
+	log.textContent = e.target.value.length;
+}

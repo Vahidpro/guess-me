@@ -88,9 +88,18 @@ form select {
   padding: 0.2rem;
 }
 
-form label.letters-counter {
+form p.letters-counter {
   color: green;
   font-size: 3rem;
+}
+
+.letters-counter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
@@ -160,7 +169,7 @@ a {
   text-decoration: none;
 }
 
-input.yv {
+input.word-input {
   padding: 6px 12px;
   font-size: 1.5rem;
   font-weight: 400;
@@ -179,22 +188,22 @@ input.yv {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-input.yv::-webkit-input-placeholder {
+input.word-input::-webkit-input-placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
 }
 
-input.yv:-ms-input-placeholder {
+input.word-input:-ms-input-placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
 }
 
-input.yv::-ms-input-placeholder {
+input.word-input::-ms-input-placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
 }
 
-input.yv::placeholder {
+input.word-input::placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
 }
