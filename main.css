@@ -2,23 +2,16 @@
 * {
   color: white;
   font-family: "Vazirmatn", sans-serif;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 25px;
 }
 
 body {
   background-color: #15202b;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -28,21 +21,18 @@ body {
 }
 
 .modal {
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   opacity: 0;
   display: none;
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   width: 90%;
   height: 80%;
-  background-color: #1765db;
-  padding: 6rem;
-  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: rgb(23, 101, 219);
+  padding: 3rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 
@@ -80,35 +70,21 @@ p {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   font-size: 1.5rem;
   width: 98%;
   height: 80%;
   padding: 0.5rem;
   background-color: #142533;
 }
-
 form label,
 form select,
 form option,
@@ -116,50 +92,36 @@ form input,
 form div {
   background-color: #142533;
 }
-
 form label,
 form div {
   margin: 1.4rem;
   padding: 0.5rem;
 }
-
 form select,
 form input {
   font-size: 1.2rem;
   margin: 2 0.5rem 2 0.5rem;
 }
-
 form select {
   padding: 0.2rem;
 }
-
 form p.letters-counter {
   color: green;
   font-size: 3rem;
 }
 
 .letters-counter-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 2.5rem;
   border-radius: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   right: 0;
   background-color: #1a1919;
@@ -171,43 +133,29 @@ a.guess-button {
   cursor: pointer;
   font-weight: 700;
   font-family: vazirmatn, "sans-serif";
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   padding: 10px 10px;
   border-radius: 100px;
   background: #0094ff;
   border: 1px solid transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 1.5rem;
   margin: 1rem;
 }
-
 a.guess-button:hover {
   background: #004b81;
 }
-
 a.guess-button > svg {
   width: 34px;
   margin-left: 8px;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
-
 a.guess-button:hover svg {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  transform: translateX(5px);
 }
-
 a.guess-button :active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 a {
@@ -215,7 +163,7 @@ a {
 }
 
 input.word-input {
-  padding: 6px 12px;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
@@ -227,59 +175,39 @@ input.word-input {
      -moz-appearance: none;
           appearance: none;
   border-radius: 25px;
-  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
-
-input.word-input::-webkit-input-placeholder {
+input.word-input::-moz-placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
 }
-
 input.word-input:-ms-input-placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
 }
-
-input.word-input::-ms-input-placeholder {
-  color: rgba(114, 250, 198, 0.356);
-  font-size: 1.5rem;
-}
-
 input.word-input::placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
 }
 
 .info-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 0.5rem;
   margin-top: auto;
 }
-
 .info-container a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   background-color: #242e3d;
   padding: 0.5rem 0 0.5rem 0.5rem;
   margin: 0 0.5rem 0 0.5rem;
   width: 50%;
 }
-
 .info-container a img {
   margin: 0 0.5rem 0 0.5rem;
 }
 
 .developer a {
   color: violet;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -23,9 +23,10 @@ function updateLetters(e) {
 
 // Modal
 const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
+const overlay = document.querySelector(".overlay");    
 const btnCloseModal = document.querySelector(".close");
 const btnsOpenModal = document.querySelector(".guide");
+let vahid;
 
 const openModal = function () {
 	overlay.style.display = "block";
