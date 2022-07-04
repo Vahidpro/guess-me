@@ -35,11 +35,10 @@
   </header>
   <main>
     <div class="container">
-
       <form class="answer-form" action="">
+        <label for="deleted">حروف حذف شده:</label>
         <div class="back"><span class="iconify " data-icon="eva:arrow-back-outline"></span>
         </div>
-        <label for="deleted">حروف حذف شده:</label>
         <div class="deleted-container">
           <div class="letter-box-wrong">م</div>
         </div>
@@ -47,11 +46,21 @@
         <div class="deleted-container">
           <div class="letter-box-correct">ن</div>
         </div>
-        <label for="message">پیام:</label>
-        <label for="word">حرف:</label>
-        <input type="text" name="" id="">
-        <label for="score">امتیاز:</label>
-        <label for="remained">تلاش باقی مانده:</label>
+        <div class="message-container">
+          <label for="message-lable">پیام:</label>
+          <label for="message">شروع به حدس زدن کن...🔍</label>
+        </div>
+        <div class="guess-container"><label for="word">حرف:</label>
+          <input type="text" name="" id="">
+        </div>
+        <div class="score">
+          <label for="score">امتیاز:</label>
+          <label for="score">۲۰ امتیاز</label>
+        </div>
+        <div class="remained">
+          <label for="remained">تلاش باقی مانده:</label>
+          <label for="remained">۲ حرف باقی مانده</label>
+        </div>
 
       </form>
 
