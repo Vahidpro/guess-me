@@ -71,6 +71,8 @@ nav {
 
 main {
 	margin: 0 0.5rem 0 0.5rem;
+	display: flex;
+	justify-content: center;
 }
 
 p {
@@ -79,20 +81,28 @@ p {
 
 .container {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	width: 95%;
+	height: 35rem;
+	padding: 0.5rem;
+	background-color: #142533;
+	flex-direction: column;
+	font-size: 1.2rem;
+	padding: 2rem;
+	gap: 5rem;
+	transition: all 1s;
 }
 
-form {
+.transform {
+	transform: translateY(0px) !important;
+}
+.main-form {
 	// display: none;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	font-size: 1.5rem;
-	width: 98%;
-	height: 80%;
-	padding: 0.5rem;
-	background-color: #142533;
+	height: 35rem;
 
 	label,
 	select,
@@ -122,6 +132,37 @@ form {
 		color: green;
 		font-size: 3rem;
 	}
+}
+
+.answer-form {
+	transform: translateY(-20px);
+	// display: none;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	gap: 3rem;
+	transition: all 0.5s;
+}
+
+.letter-box-wrong {
+	background: #ff3c00;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: 700;
+	font-size: xx-large;
+}
+
+.letter-box-correct {
+	background: #005a0f;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: 700;
+	font-size: xx-large;
 }
 .letters-counter-container {
 	display: flex;

@@ -16,29 +16,28 @@ const wordInput = document.querySelector(".word-input");
 const log = document.querySelector(".letters-counter");
 
 wordInput.addEventListener("input", updateLetters);
-
 function updateLetters(e) {
 	log.textContent = e.target.value.length;
 }
 
 // Modal
 const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");    
+const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close");
 const btnsOpenModal = document.querySelector(".guide");
 let vahid;
 
-const openModal = function () {
+const openModal = () => {
 	overlay.style.display = "block";
 	modal.style.display = "block";
 
-	setTimeout(function () {
+	setTimeout(() => {
 		overlay.classList.add("open");
 		modal.classList.add("open");
 	}, 10);
 };
 
-const closeModal = function () {
+const closeModal = () => {
 	overlay.classList.remove("open");
 	modal.classList.remove("open");
 	setTimeout(function () {
@@ -55,3 +54,32 @@ document.addEventListener("keydown", function (e) {
 		closeModal();
 	}
 });
+
+// Click guess button and move to other page (answer form)
+// TODO:
+const switchPage = () => {
+	const mainForm = document.querySelector(".main-form");
+	const answerForm = document.querySelector(".answer-form");
+	mainForm.style.display = "none";
+	answerForm.style.display = "flex";
+
+	setTimeout(() => {
+		answerForm.classList.add("open");
+		answerForm.classList.add("transform");
+	}, 400);
+};
+
+document.querySelector(".guess-button").addEventListener("click", switchPage);
+
+// Go back icon in answer page
+
+const goBack = () => {
+	const mainForm = document.querySelector(".main-form");
+	const answerForm = document.querySelector(".answer-form");
+	console.log("hi");
+	mainForm.style.display = "flex";
+	answerForm.style.display = "none";
+	answerForm.classList.remove("open");
+	answerForm.classList.remove("transform");
+};
+document.querySelector(".back").addEventListener("click", goBack);
