@@ -67,6 +67,19 @@ body {
 
 nav {
 	margin: 0.5rem 0.5rem 0 0;
+
+	.icons {
+		display: inline;
+	}
+}
+
+.logo {
+	height: 2.5rem;
+	left: 50%;
+}
+
+.logo-link {
+	margin-right: 4rem;
 }
 
 main {
@@ -162,6 +175,35 @@ p {
 
 	.deleted {
 		padding-top: 3rem;
+	}
+
+	input {
+		text-align: center;
+		font-size: 1.5rem;
+		width: 4rem;
+		font-weight: 400;
+		line-height: 1.5;
+		color: whitesmoke;
+		background-color: #00375f;
+		background-clip: padding-box;
+		border: #33ff00 solid 1px;
+
+		appearance: none;
+		border-radius: 25px;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+		//   &:focus {
+		//     color: #212529;
+		//     background-color: #fff;
+		//     border-color: #86b7fe;
+		//     outline: 0;
+		//     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+		//   }
+
+		&::placeholder {
+			color: rgba(114, 250, 198, 0.356);
+			font-size: 1.5rem;
+		}
 	}
 }
 

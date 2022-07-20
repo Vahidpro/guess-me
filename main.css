@@ -60,6 +60,18 @@ body {
 nav {
   margin: 0.5rem 0.5rem 0 0;
 }
+nav .icons {
+  display: inline;
+}
+
+.logo {
+  height: 2.5rem;
+  left: 50%;
+}
+
+.logo-link {
+  margin-right: 4rem;
+}
 
 main {
   margin: 0 0.5rem 0 0.5rem;
@@ -149,6 +161,34 @@ p {
 }
 .answer-form .deleted {
   padding-top: 3rem;
+}
+.answer-form input {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: whitesmoke;
+  background-color: #00375f;
+  background-clip: padding-box;
+  border: #33ff00 solid 1px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 25px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.answer-form input::-moz-placeholder {
+  color: rgba(114, 250, 198, 0.356);
+  font-size: 1.5rem;
+}
+.answer-form input:-ms-input-placeholder {
+  color: rgba(114, 250, 198, 0.356);
+  font-size: 1.5rem;
+}
+.answer-form input::placeholder {
+  color: rgba(114, 250, 198, 0.356);
+  font-size: 1.5rem;
 }
 
 .letter-box-wrong {
