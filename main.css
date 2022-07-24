@@ -73,6 +73,22 @@ nav .icons {
   margin-right: 4rem;
 }
 
+.submit-word {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: vazirmatn, "sans-serif";
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: #0094ff;
+  border: 1px solid transparent;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.submit-word:hover {
+  background: #004b81;
+}
+
 main {
   margin: 0 0.5rem 0 0.5rem;
   display: flex;
@@ -159,7 +175,7 @@ p {
 .answer-form div {
   margin: 1rem;
 }
-.answer-form .deleted {
+.answer-form .wrong {
   padding-top: 3rem;
 }
 .answer-form input {
@@ -200,6 +216,7 @@ p {
   font-weight: 700;
   font-size: xx-large;
   display: inline-block;
+  margin: 0.3rem !important;
 }
 
 .letter-box-correct {
@@ -211,6 +228,7 @@ p {
   font-weight: 700;
   font-size: xx-large;
   display: inline-block;
+  margin: 0.3rem !important;
 }
 
 .letters-counter-container {
