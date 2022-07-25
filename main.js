@@ -78,8 +78,6 @@ const switchPage = () => {
 		.split("")
 		.reverse();
 
-	console.log(wordInputCount);
-
 	const displayBlocks = function (words) {
 		words.forEach(function (words, i) {
 			const html = `<div class="letter-box-empty index-${i}"></div>`;
@@ -90,6 +88,7 @@ const switchPage = () => {
 };
 
 var submitWord = document.querySelector(".submit-word");
+let repetitiveCheck = [];
 
 const submit = () => {
 	// Input word
@@ -98,18 +97,13 @@ const submit = () => {
 		.value.replace(/\s/g, "")
 		.split("")
 		.reverse();
-	var guessWordInput = document.querySelector(".guess-word-input").value;
-	console.log(guessWordInput);
 
-	// console.log("sub");
+	var guessWordInput = document.querySelector(".guess-word-input").value;
+
 	//Check wether word included or not
 	// if included:
-	for (const [i, word] in wordInputArray.entries()) {
-		console.log(i, word);
-	}
 	if (wordInputArray.includes(guessWordInput)) {
 		let inputIndex = wordInputArray.indexOf(guessWordInput);
-		console.log(inputIndex);
 
 		// change class form empty to correct
 		// change value of html with class index-i
@@ -122,11 +116,15 @@ const submit = () => {
 	}
 	// if not included:
 	else {
-		const htmlWrong = `<div class="letter-box-wrong">${guessWordInput}</div>`;
+		if (!repetitiveCheck.includes(guessWordInput)) {
+			// Repetitive
+			repetitiveCheck.push(guessWordInput);
+			console.log(repetitiveCheck);
 
-		console.log("not include");
+			const htmlWrong = `<div class="letter-box-wrong">${guessWordInput}</div>`;
 
-		wrongContainer.insertAdjacentHTML("afterbegin", htmlWrong);
+			wrongContainer.insertAdjacentHTML("afterbegin", htmlWrong);
+		}
 	}
 };
 
@@ -149,9 +147,3 @@ const goBack = () => {
 	log.textContent = "۰";
 };
 document.querySelector(".back").addEventListener("click", goBack);
-
-// const CorrectWords = ["ا", "ل", "ه", "ا", "م"];
-
-// Practice
-// const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// console.log(fruits.includes("Mango"));
