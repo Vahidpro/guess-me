@@ -16,14 +16,13 @@ const correctContainer = document.querySelector(".correct-container");
 const wrongContainer = document.querySelector(".wrong-container");
 
 // Letters Counter
-const wordInput = document.querySelector(".word-input");
-const log = document.querySelector(".letters-counter");
+var wordInput = document.querySelector(".word-input");
+var log = document.querySelector(".letters-counter");
 
 wordInput.addEventListener("input", updateLetters);
 function updateLetters(e) {
 	log.textContent = e.target.value.length;
 }
-
 // Modal
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -71,6 +70,23 @@ const switchPage = () => {
 		answerForm.classList.add("open");
 		answerForm.classList.add("transform");
 	}, 400);
+
+	// Count words
+	const wordInputCount = document
+		.querySelector(".word-input")
+		.value.replace(/\s/g, "")
+		.split("")
+		.reverse();
+
+	console.log(wordInputCount);
+
+	const displayBlocks = function (words) {
+		words.forEach(function (words, i) {
+			const html = `<div class="letter-box-empty index-${i}"></div>`;
+			correctContainer.insertAdjacentHTML("afterbegin", html);
+		});
+	};
+	displayBlocks(wordInputCount);
 };
 
 var submitWord = document.querySelector(".submit-word");
@@ -82,20 +98,27 @@ const submit = () => {
 		.value.replace(/\s/g, "")
 		.split("")
 		.reverse();
-	console.log(wordInputArray);
-
 	var guessWordInput = document.querySelector(".guess-word-input").value;
 	console.log(guessWordInput);
-	// console.log("sub");
 
+	// console.log("sub");
 	//Check wether word included or not
 	// if included:
+	for (const [i, word] in wordInputArray.entries()) {
+		console.log(i, word);
+	}
 	if (wordInputArray.includes(guessWordInput)) {
-		const html = `<div class="letter-box-correct">${guessWordInput}</div>`;
+		let inputIndex = wordInputArray.indexOf(guessWordInput);
+		console.log(inputIndex);
 
-		console.log("include");
+		// change class form empty to correct
+		// change value of html with class index-i
 
-		correctContainer.insertAdjacentHTML("afterbegin", html);
+		document.querySelector(`.index-${inputIndex}`).textContent = guessWordInput;
+
+		// document.querySelector(`index-`);
+		// const html = `<div class="letter-box-correct">${guessWordInput}</div>`;
+		// correctContainer.insertAdjacentHTML("afterbegin", html);
 	}
 	// if not included:
 	else {
@@ -120,6 +143,10 @@ const goBack = () => {
 	answerForm.style.display = "none";
 	answerForm.classList.remove("open");
 	answerForm.classList.remove("transform");
+
+	// Reset values
+	wordInput.value = "";
+	log.textContent = "۰";
 };
 document.querySelector(".back").addEventListener("click", goBack);
 

@@ -247,6 +247,18 @@ p {
 	display: inline-block;
 	margin: 0.3rem !important;
 }
+
+.letter-box-empty {
+	background: #363636;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: 700;
+	font-size: xx-large;
+	display: inline-block;
+	margin: 0.3rem !important;
+}
 .letters-counter-container {
 	display: flex;
 	align-items: center;
