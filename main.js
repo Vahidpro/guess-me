@@ -60,16 +60,17 @@ document.addEventListener("keydown", function (e) {
 
 // Click guess button and move to other page (answer form)
 // TODO:
-const switchPage = () => {
-	function allLetter(inputtxt) {
-		var letters = /^[A-Za-z]+$/;
-		if (inputtxt.value.match(letters)) {
-			return true;
-		} else {
-			alert("فقط حروف وارد کن!!!🚫");
-			return false;
-		}
+
+function allLetter(inputtxt) {
+	var letters = /^[آا-ی]+$/;
+	if (inputtxt.value.match(letters)) {
+		return true;
+	} else {
+		alert("فقط حروف وارد کن!🚫");
+		return false;
 	}
+}
+const switchPage = () => {
 	if (allLetter(wordInput)) {
 		const mainForm = document.querySelector(".main-form");
 		const answerForm = document.querySelector(".answer-form");
@@ -103,7 +104,7 @@ let repetitiveCheck = [];
 
 const submit = () => {
 	// Input word
-	const wordInputArray = document
+	let wordInputArray = document
 		.querySelector(".word-input")
 		.value.replace(/\s/g, "")
 		.split("")
@@ -164,5 +165,8 @@ const goBack = () => {
 	// Reset values
 	wordInput.value = "";
 	log.textContent = "۰";
+	wordInputCount = [];
+
+	document.querySelectorAll(".letter-box-empty").forEach((e) => e.remove());
 };
 document.querySelector(".back").addEventListener("click", goBack);
