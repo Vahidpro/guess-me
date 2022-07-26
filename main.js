@@ -110,14 +110,10 @@ const submit = () => {
 				findRepetitionIndex.push(i);
 			}
 		}
-		console.log(findRepetitionIndex);
-
 		let inputIndex = wordInputArray.indexOf(guessWordInput);
 
 		// change class form empty to correct
 		if (findRepetitionIndex.length >= 2) {
-			console.log("there is repeat");
-
 			for (i = 0; i < findRepetitionIndex.length; i++) {
 				document.querySelector(`.index-${findRepetitionIndex[i]}`).textContent =
 					guessWordInput;
@@ -159,5 +155,3 @@ const goBack = () => {
 	log.textContent = "۰";
 };
 document.querySelector(".back").addEventListener("click", goBack);
-
-// Practice
