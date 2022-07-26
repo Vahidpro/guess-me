@@ -62,11 +62,11 @@ document.addEventListener("keydown", function (e) {
 // TODO:
 
 function allLetter(inputtxt) {
-	var letters = /^[آا-ی]+$/;
+	var letters = /^[آا-ی ]+$/;
 	if (inputtxt.value.match(letters)) {
 		return true;
 	} else {
-		alert("فقط حروف وارد کن!🚫");
+		alert("فقط حروف فارسی وارد کن!🚫");
 		return false;
 	}
 }
