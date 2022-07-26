@@ -61,30 +61,41 @@ document.addEventListener("keydown", function (e) {
 // Click guess button and move to other page (answer form)
 // TODO:
 const switchPage = () => {
-	const mainForm = document.querySelector(".main-form");
-	const answerForm = document.querySelector(".answer-form");
-	mainForm.style.display = "none";
-	answerForm.style.display = "flex";
+	function allLetter(inputtxt) {
+		var letters = /^[A-Za-z]+$/;
+		if (inputtxt.value.match(letters)) {
+			return true;
+		} else {
+			alert("فقط حروف وارد کن!!!🚫");
+			return false;
+		}
+	}
+	if (allLetter(wordInput)) {
+		const mainForm = document.querySelector(".main-form");
+		const answerForm = document.querySelector(".answer-form");
+		mainForm.style.display = "none";
+		answerForm.style.display = "flex";
 
-	setTimeout(() => {
-		answerForm.classList.add("open");
-		answerForm.classList.add("transform");
-	}, 400);
+		setTimeout(() => {
+			answerForm.classList.add("open");
+			answerForm.classList.add("transform");
+		}, 400);
 
-	// Count words
-	const wordInputCount = document
-		.querySelector(".word-input")
-		.value.replace(/\s/g, "")
-		.split("")
-		.reverse();
+		// Count words
+		const wordInputCount = document
+			.querySelector(".word-input")
+			.value.replace(/\s/g, "")
+			.split("")
+			.reverse();
 
-	const displayBlocks = function (words) {
-		words.forEach(function (words, i) {
-			const html = `<div class="letter-box-empty index-${i}"></div>`;
-			correctContainer.insertAdjacentHTML("afterbegin", html);
-		});
-	};
-	displayBlocks(wordInputCount);
+		const displayBlocks = function (words) {
+			words.forEach(function (words, i) {
+				const html = `<div class="letter-box-empty index-${i}"></div>`;
+				correctContainer.insertAdjacentHTML("afterbegin", html);
+			});
+		};
+		displayBlocks(wordInputCount);
+	}
 };
 
 var submitWord = document.querySelector(".submit-word");
