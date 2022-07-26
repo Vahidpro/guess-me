@@ -171,6 +171,7 @@ p {
 .answer-form label {
   margin: 0.5rem;
   padding: 0.5rem;
+  font-size: 1.3rem;
 }
 .answer-form div {
   margin: 1rem;
@@ -194,6 +195,13 @@ p {
   border-radius: 25px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.answer-form input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(21, 253, 13, 0.25);
+}
 .answer-form input::-moz-placeholder {
   color: rgba(114, 250, 198, 0.356);
   font-size: 1.5rem;
@@ -207,40 +215,47 @@ p {
   font-size: 1.5rem;
 }
 
+.correct-container,
+.wrong-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 !important;
+}
+
 .letter-box-wrong {
   background: #ff3c00;
-  width: 3rem;
   height: 3rem;
   border-radius: 8px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   font-size: xx-large;
   display: inline-block;
-  margin: 0.3rem !important;
+  margin: 0.2rem !important;
+  min-width: 3rem;
 }
 
 .letter-box-correct {
   background: #005a0f;
-  width: 3rem;
   height: 3rem;
   border-radius: 8px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   font-size: xx-large;
   display: inline-block;
-  margin: 0.3rem !important;
+  margin: 0.2rem !important;
+  min-width: 3rem;
 }
 
 .letter-box-empty {
   background: #363636;
-  width: 3rem;
   height: 3rem;
   border-radius: 8px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   font-size: xx-large;
   display: inline-block;
-  margin: 0.3rem !important;
+  margin: 0.2rem !important;
+  min-width: 3rem;
 }
 
 .letters-counter-container {

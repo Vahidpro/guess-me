@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 $secondary-text: #8899a6;
+@mixin letter-box($color: #363636) {
+	background: $color;
+	height: 3rem;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: 500;
+	font-size: xx-large;
+	display: inline-block;
+	margin: 0.2rem !important;
+	min-width: 3rem;
+}
 
 * {
 	color: white;
@@ -185,6 +196,7 @@ p {
 	label {
 		margin: 0.5rem;
 		padding: 0.5rem;
+		font-size: 1.3rem;
 	}
 	div {
 		margin: 1rem;
@@ -209,13 +221,13 @@ p {
 		border-radius: 25px;
 		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-		//   &:focus {
-		//     color: #212529;
-		//     background-color: #fff;
-		//     border-color: #86b7fe;
-		//     outline: 0;
-		//     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
-		//   }
+		&:focus {
+			color: #212529;
+			background-color: #fff;
+			border-color: #86b7fe;
+			outline: 0;
+			box-shadow: 0 0 0 0.25rem rgba(21, 253, 13, 0.25);
+		}
 
 		&::placeholder {
 			color: rgba(114, 250, 198, 0.356);
@@ -224,41 +236,25 @@ p {
 	}
 }
 
+.correct-container,
+.wrong-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 !important;
+}
+
 .letter-box-wrong {
-	background: #ff3c00;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 8px;
-	text-align: center;
-	font-weight: 700;
-	font-size: xx-large;
-	display: inline-block;
-	margin: 0.3rem !important;
+	@include letter-box($color: #ff3c00);
 }
 
 .letter-box-correct {
-	background: #005a0f;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 8px;
-	text-align: center;
-	font-weight: 700;
-	font-size: xx-large;
-	display: inline-block;
-	margin: 0.3rem !important;
+	@include letter-box($color: #005a0f);
 }
 
 .letter-box-empty {
-	background: #363636;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 8px;
-	text-align: center;
-	font-weight: 700;
-	font-size: xx-large;
-	display: inline-block;
-	margin: 0.3rem !important;
+	@include letter-box();
 }
+
 .letters-counter-container {
 	display: flex;
 	align-items: center;
