@@ -100,26 +100,38 @@ const submit = () => {
 
 	var guessWordInput = document.querySelector(".guess-word-input").value;
 
-	//Check wether word included or not
-	// if included:
+	//Check wether word included or not, if included:
+
 	if (wordInputArray.includes(guessWordInput)) {
+		// Find repititive words index
+		var findRepetitionIndex = [];
+		for (i = 0; i < wordInputArray.length; i++) {
+			if (wordInputArray[i] == guessWordInput) {
+				findRepetitionIndex.push(i);
+			}
+		}
+		console.log(findRepetitionIndex);
+
 		let inputIndex = wordInputArray.indexOf(guessWordInput);
 
 		// change class form empty to correct
-		// change value of html with class index-i
+		if (findRepetitionIndex.length >= 2) {
+			console.log("there is repeat");
 
-		document.querySelector(`.index-${inputIndex}`).textContent = guessWordInput;
-
-		// document.querySelector(`index-`);
-		// const html = `<div class="letter-box-correct">${guessWordInput}</div>`;
-		// correctContainer.insertAdjacentHTML("afterbegin", html);
+			for (i = 0; i < findRepetitionIndex.length; i++) {
+				document.querySelector(`.index-${findRepetitionIndex[i]}`).textContent =
+					guessWordInput;
+			}
+		} else {
+			document.querySelector(`.index-${inputIndex}`).textContent =
+				guessWordInput;
+		}
 	}
 	// if not included:
 	else {
 		if (!repetitiveCheck.includes(guessWordInput)) {
-			// Repetitive
+			// Repetitive check
 			repetitiveCheck.push(guessWordInput);
-			console.log(repetitiveCheck);
 
 			const htmlWrong = `<div class="letter-box-wrong">${guessWordInput}</div>`;
 
@@ -147,3 +159,5 @@ const goBack = () => {
 	log.textContent = "۰";
 };
 document.querySelector(".back").addEventListener("click", goBack);
+
+// Practice
