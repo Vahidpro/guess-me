@@ -102,8 +102,9 @@ const switchPage = () => {
 var submitWord = document.querySelector(".submit-word");
 let repetitiveCheck = [];
 
-const submit = () => {
+const submit = (e) => {
 	// Input word
+	e.preventDefault();
 	let wordInputArray = document
 		.querySelector(".word-input")
 		.value.replace(/\s/g, "")
