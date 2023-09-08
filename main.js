@@ -61,9 +61,9 @@ document.addEventListener("keydown", function (e) {
 // Click guess button and move to other page (answer form)
 // TODO:
 
-function allLetter(inputtxt) {
+function allLetter(inputText) {
 	var letters = /^[آا-ی ]+$/;
-	if (inputtxt.value.match(letters)) {
+	if (inputText.value.match(letters)) {
 		return true;
 	} else {
 		alert("فقط حروف فارسی وارد کن!🚫");
