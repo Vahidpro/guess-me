@@ -1,124 +1,15 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./main.css" />
-  <link rel="manifest" href="manifest.json" />
-  <title>😃حدس بزن!🤔</title>
-</head>
-
-<body>
-  <div class="modal ">
-    <span class="close"><span class="iconify" data-icon="ep:circle-close-filled"></span></span>
-    <h1>راهنمای بازی:</h1>
-    <p>از لیست بالا دسته بندی کلمه مورد نظر خود را انتخاب کنید</p>
-    <p>کلمه مورد نظر خود را وارد کنید</p>
-    <p>روی دکمه حدس بزن کلیک کن و کلمه رو حدس بزن😃 </p>
-  </div>
-  <div class="overlay"></div>
-
-  <header>
-    <nav>
-      <div class="icons">
-        <a href="#">
-          <img class="guide" src="./resources/icon/question.svg" alt="" />
-        </a>
-        <a href="#">
-          <img src="./resources/icon/dark.svg" alt="" />
-        </a>
-        <a href="#">
-          <img src="./resources/icon/day.svg" alt="" />
-        </a>
-      </div>
-      <a class="logo-link" href="logo">
-        <img class="logo" src="./resources/icon/logo.png" alt="">
-      </a>
-    </nav>
-  </header>
-  <main>
-    <div class="container">
-      <form class="answer-form" action="">
-        <label for="wrong">حروف حذف شده:</label>
-        <div class="back"><span class="iconify " data-icon="eva:arrow-back-outline"></span>
-        </div>
-        <div class="wrong-container">
-        </div>
-        <label for="correct">حروف درست:</label>
-        <div class="correct-container">
-        </div>
-        <div class="message-container">
-          <label for="message-lable">پیام:</label>
-          <label for="message">شروع به حدس زدن کن...🔍</label>
-        </div>
-        <div class="guess-container"><label for="word">حرف:</label>
-          <input maxlength="1" class="guess-word-input" type="text" name="" id="">
-          <button class="submit-word">تایید</button>
-        </div>
-        <div class="score">
-          <label for="score">امتیاز:</label>
-          <label for="score">۲۰ امتیاز</label>
-        </div>
-        <div class="remained">
-          <label for="remained">تلاش باقی مانده:</label>
-          <label for="remained">۲ حرف باقی مانده</label>
-        </div>
-
-      </form>
-
-
-      <form class="main-form" action="index.html">
-        <label for="word-group">گروه کلمات</label>
-        <select name="word-group-select" id="">
-          <option value="city">نام شهر</option>
-          <option value="actor-iran">بازیگر ایرانی</option>
-          <option value="city">بازیگر خارجی</option>
-          <option value="country">کشور</option>
-          <option value="animal">حیوان</option>
-          <option value="things">اشیاء</option>
-          <option value="fruit">میوه</option>
-          <option value="hahaha">همینجوری الکی</option>
-          <option value="foreign-movie">فیلم خارجی</option>
-          <option value="iran-movie">فیلم ایرانی</option>
-        </select>
-        <label for="word">کلمه:</label>
-        <input class="word-input" type="text" placeholder="کلمه مورد نظر شما..." />
-        <div class="letters-counter-container
-">
-          <label for="letters">تعداد حروف </label>
-          <p class="letters-counter" for="letters-counter">۰</p>
-        </div>
-        <a href="#" class="guess-button">
-          <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="8"></circle>
-            <path
-              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-              fill="white"></path>
-          </svg>
-          <span>حدس بزن!</span>
-        </a>
-      </form>
-    </div>
-  </main>
-  <div class="info-container">
-    <a href=""> <img src="./resources/icon/info.svg" alt="" />درباره</a>
-    <a class="btn-share" href=""><img src="./resources/icon/share.svg" alt="" /> اشتراک گذاری</a>
-  </div>
-  <!-- <footer>
-      <div class="developer">
-        <p>
-          طراحی و توسعه با ❤️ توسط
-          <a href="https://twitter.com/Vahidpr"> وحید پارسافر</a>
-          ۱۴۰۱
-        </p>
-      </div>
-    </footer> -->
-
-  <script src="./main.js"></script>
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f0a1a" />
+    <meta name="description" content="بازی دو نفره حدس کلمه - حدس بزن!" />
+    <link rel="icon" type="image/png" href="/icons/icon.png" />
+    <title>حدس بزن!</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
