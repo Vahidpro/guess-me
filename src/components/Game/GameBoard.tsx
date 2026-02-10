@@ -2,10 +2,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useGame } from '../../context/GameContext'
 import { CATEGORIES } from '../../utils/constants'
-import { GlassCard } from '../ui/GlassCard'
 import { LetterBoxes } from './LetterBoxes'
 import { WrongLetters } from './WrongLetters'
-import { GuessInput } from './GuessInput'
 import { GameStats } from './GameStats'
 import { GameResult } from './GameResult'
 
@@ -15,12 +13,12 @@ export function GameBoard() {
 
   return (
     <>
-      <GlassCard className="w-full max-w-sm relative">
+      <div className="w-full max-w-lg relative">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => dispatch({ type: 'RESET_GAME' })}
-          className="absolute top-4 left-4 p-2 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+          className="absolute top-0 right-0 p-2 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
         >
           <ArrowRight size={20} className="text-white/60" />
         </motion.button>
@@ -42,10 +40,9 @@ export function GameBoard() {
             </motion.p>
           )}
 
-          <GuessInput />
           <GameStats />
         </div>
-      </GlassCard>
+      </div>
 
       <GameResult />
     </>

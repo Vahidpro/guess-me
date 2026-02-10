@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(dir:*)",
-      "Bash(git -C /g/Projects/JS/guess-me log --oneline)",
-      "Bash(git -C /g/Projects/JS/guess-me remote:*)"
-    ]
-  }
-}

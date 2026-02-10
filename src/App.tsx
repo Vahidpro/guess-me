@@ -5,6 +5,7 @@ import { Header } from "./components/Layout/Header";
 import { Footer } from "./components/Layout/Footer";
 import { SetupForm } from "./components/Setup/SetupForm";
 import { GameBoard } from "./components/Game/GameBoard";
+import { PersianKeyboard } from "./components/Game/PersianKeyboard";
 import { Modal } from "./components/ui/Modal";
 
 function GameView() {
@@ -16,7 +17,7 @@ function GameView() {
 		<div className="min-h-dvh flex flex-col font-vazir bg-gradient-main text-white">
 			<Header onHelp={() => setShowHelp(true)} />
 
-			<main className="flex-1 flex items-center justify-center p-4">
+			<main className={`flex-1 flex items-center justify-center p-4 ${state.phase !== "SETUP" ? "pb-44" : ""}`}>
 				<AnimatePresence mode="wait">
 					{state.phase === "SETUP" ? (
 						<motion.div
@@ -44,6 +45,7 @@ function GameView() {
 				</AnimatePresence>
 			</main>
 
+			<PersianKeyboard />
 			<Footer onAbout={() => setShowAbout(true)} />
 
 			<Modal
